@@ -6,6 +6,7 @@
 #include "effect-random.h"
 #include "effect-warmrandom.h"
 #include "effect-coolrandom.h"
+#include "effect-emergency-lights.h"
 
 Effect *e;
 Renderer *r;
