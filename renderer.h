@@ -7,6 +7,7 @@ struct Renderer {
     }
 
     virtual void set_pixel(int idx, int r, int g, int b) = 0;
+    virtual void set_pixel(int idx, int rgb) = 0;
 
     virtual void clear_pixel(int idx) {
         set_pixel(idx, 0, 0, 0);

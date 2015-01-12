@@ -34,6 +34,10 @@ struct Octo : Renderer {
         _pixels->setPixel(idx, r, g, b);
     }
 
+    void set_pixel(int idx, int rgb) {
+        _pixels->setPixel(idx, rgb);
+    }
+
     bool busy() {
         _pixels->busy();
     }
