@@ -13,6 +13,7 @@ struct CoolRandom : Random {
 
 protected:
     int _scale = 0;
+    int passes = 5;
 
     virtual void set_scale() {
         _scale = rand(max, passes);
