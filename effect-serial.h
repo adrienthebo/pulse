@@ -9,7 +9,7 @@ struct SerialDebugger : Effect {
     int idx = 0;
     int color = 0xFFFFFF;
 
-    S() {
+    SerialDebugger() {
         Serial.begin(9600);
     }
 
