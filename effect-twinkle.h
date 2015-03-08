@@ -32,7 +32,7 @@ protected:
     uint8_t decrement(int index) {
         if(luma[index] <= 0) {
             direction[index] = true;
-            max[index] = speed * rand(224 / speed, 5);
+            max[index] = speed * rand(224 / speed, passes);
         } else {
             luma[index] -= speed;
         }
@@ -53,6 +53,7 @@ protected:
     uint8_t *max;
 
     int speed = 1;
+    int passes = 3;
 };
 
 #endif // _TWINKLE_H_
