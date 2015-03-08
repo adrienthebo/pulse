@@ -1,4 +1,6 @@
 #include <OctoWS2811.h>
+#include <Color.h>
+
 #include "renderer-octo.h"
 #include "view.h"
 #include "framerate.h"
@@ -9,6 +11,8 @@
 #include "effect-emergency-lights.h"
 #include "effect-strobe.h"
 #include "effect-twinkle.h"
+#include "effect-whoa.h"
+#include "effect-rainbow.h"
 
 #include "effect-serial.h"
 
@@ -28,8 +32,10 @@ void setup_effect() {
     //e = new Strobe();
     //e = new EmergencyLights();
     //e = new SerialDebugger();
+    //e = new Whoa();
+    e = new Rainbow();
 
-    e = new Twinkle(400);
+    //e = new Twinkle(400);
 }
 
 void setup() {
