@@ -40,5 +40,5 @@ void setup() {
 void loop() {
     e->apply(r);
     r->show();
-    delay(FPS_15);
+    delay(FPS_60);
 }
