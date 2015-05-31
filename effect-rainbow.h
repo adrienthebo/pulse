@@ -12,7 +12,7 @@ struct Rainbow : Effect {
 
     float scale = 0.04;
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         Color c;
 
         hue = increment_hue(hue);

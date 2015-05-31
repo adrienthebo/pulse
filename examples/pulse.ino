@@ -1,7 +1,7 @@
 #include <OctoWS2811.h>
 #include <Color.h>
 
-#include "renderer-octo.h"
+#include "output-octo.h"
 #include "view.h"
 #include "framerate.h"
 
@@ -17,9 +17,9 @@
 #include "effect-serial.h"
 
 Effect *e;
-Renderer *r;
+Output *r;
 
-void setup_renderer() {
+void setup_output() {
     r = new Octo(50 * 8, 50, WS2811_RGB);
     //r = new Octo(60 * 8, 60, WS2811_GRB);
     r->clear();
@@ -39,7 +39,7 @@ void setup_effect() {
 }
 
 void setup() {
-    setup_renderer();
+    setup_output();
     setup_effect();
 }
 

@@ -15,7 +15,7 @@ struct Twinkle : Effect {
         memset(max, 16, sizeof(uint8_t) * count);
     }
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         for(int i = 0; i < r->get_length(); i++) {
             uint8_t newval;
             if(direction[i]) {

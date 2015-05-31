@@ -1,13 +1,13 @@
-#ifndef _RENDERER_OCTO_H_
-#define _RENDERER_OCTO_H_
-#include "renderer.h"
+#ifndef _OUTPUT_OCTO_H_
+#define _OUTPUT_OCTO_H_
+#include "output.h"
 
-struct Octo : Renderer {
+struct Octo : Output {
 
     Octo(int length, int strip_length) : Octo(length, strip_length, WS2811_RGB) {
     }
 
-    Octo(int length, int strip_length, int flags) : Renderer(length) {
+    Octo(int length, int strip_length, int flags) : Output(length) {
         _strip_length = strip_length;
         _flags = flags;
 
@@ -52,4 +52,4 @@ struct Octo : Renderer {
     OctoWS2811 *_pixels;
 };
 
-#endif // _RENDERER_OCTO_H_
+#endif // _OUTPUT_OCTO_H_

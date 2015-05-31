@@ -6,11 +6,11 @@
 
 struct Random : Effect {
 
-    virtual void apply_one(Renderer *r, int idx) {
+    virtual void apply_one(Output *r, int idx) {
         r->set_pixel(idx, red(), green(), blue());
     }
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         for(int i = 0; i < r->get_length(); i++) {
             apply_one(r, i);
         }

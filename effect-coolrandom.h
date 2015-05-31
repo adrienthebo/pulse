@@ -6,7 +6,7 @@
 
 struct CoolRandom : Random {
 
-    virtual void apply_one(Renderer *r, int idx) {
+    virtual void apply_one(Output *r, int idx) {
         set_scale();
         Random::apply_one(r, idx);
     }

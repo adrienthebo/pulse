@@ -28,7 +28,7 @@ struct EmergencyLights : Effect {
                );
     }
 
-    virtual void apply_group(Renderer *r, int group) {
+    virtual void apply_group(Output *r, int group) {
         int rgb = 0;
 
         if(is_blue(group)) {
@@ -43,7 +43,7 @@ struct EmergencyLights : Effect {
         }
     }
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         for(int i = 0; i < r->get_length(); i++) {
             int group = i / 3;
             apply_group(r, group);

@@ -1,8 +1,8 @@
-#ifndef _RENDERER_H_
+#ifndef _OUTPUT_H_
 
-struct Renderer {
+struct Output {
 
-    Renderer(int length) {
+    Output(int length) {
         _length = length;
     }
 
@@ -30,4 +30,4 @@ protected:
     int _length;
 };
 
-#endif // _RENDERER_H_
+#endif // _OUTPUT_H_

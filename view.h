@@ -2,17 +2,17 @@
 #define _VIEW_H_
 
 struct View {
-    Renderer *_renderer;
+    Output *_output;
 
-    View(Renderer *renderer) {
-        _renderer = renderer;
+    View(Output *output) {
+        _output = output;
     }
 
     virtual void set_pixel(int x, int y, int r, int g, int b) {
         if(!is_valid(x, y)) {
             return;
         }
-        _renderer->set_pixel(to_index(x, y), r, g, b);
+        _output->set_pixel(to_index(x, y), r, g, b);
     }
 
     virtual void clear_pixel(int x, int y) {

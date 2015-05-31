@@ -23,7 +23,7 @@ struct Whoa : Effect {
      */
     float lum_scale = 0.0101;
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         Color c;
         for(int i = 0; i < r->get_length(); i++) {
             hue = increment_hue(hue);

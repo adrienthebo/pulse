@@ -21,7 +21,7 @@ struct SerialDebugger : Effect {
         Serial.println();
     }
 
-    virtual void apply(Renderer *r) {
+    virtual void apply(Output *r) {
         if (Serial.available()) {
             char c = Serial.read();
             int old = idx;
