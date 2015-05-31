@@ -7,12 +7,12 @@ struct Strobe : Effect {
 
     int counter = 0;
 
-    virtual void apply(Output *r) {
-        for(int i = 0; i < r->get_length(); i++) {
+    virtual void apply(Output *output) {
+        for(int i = 0; i < output->get_length(); i++) {
             if (counter % 2 == 0) {
-                r->set_pixel(i, 0xFFFFFF);
+                output->set_pixel(i, 0xFFFFFF);
             } else {
-                r->clear_pixel(i);
+                output->clear_pixel(i);
             }
         }
         counter++;

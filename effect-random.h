@@ -6,12 +6,12 @@
 
 struct Random : Effect {
 
-    virtual void apply_one(Output *r, int idx) {
-        r->set_pixel(idx, red(), green(), blue());
+    virtual void apply_one(Output *output, int idx) {
+        output->set_pixel(idx, red(), green(), blue());
     }
 
-    virtual void apply(Output *r) {
-        for(int i = 0; i < r->get_length(); i++) {
+    virtual void apply(Output *output) {
+        for(int i = 0; i < output->get_length(); i++) {
             apply_one(r, i);
         }
     }

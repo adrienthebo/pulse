@@ -17,25 +17,25 @@
 #include "effect-serial.h"
 
 Effect *e;
-Output *r;
+Output *output;
 
 void setup_output() {
-    r = new Octo(50 * 8, 50, WS2811_RGB);
+    output = new Octo(50 * 8, 50, WS2811_RGB);
     //r = new Octo(60 * 8, 60, WS2811_GRB);
-    r->clear();
-    r->show();
+    output->clear();
+    output->show();
 }
 
 void setup_effect() {
-    //e = new Random();
-    //e = new CoolRandom();
-    //e = new Strobe();
-    //e = new EmergencyLights();
-    //e = new SerialDebugger();
-    //e = new Whoa();
-    e = new Rainbow();
+    //effect = new Random();
+    //effect = new CoolRandom();
+    //effect = new Strobe();
+    //effect = new EmergencyLights();
+    //effect = new SerialDebugger();
+    //effect = new Whoa();
+    effect = new Rainbow();
 
-    //e = new Twinkle(400);
+    //effect = new Twinkle(400);
 }
 
 void setup() {
@@ -44,7 +44,7 @@ void setup() {
 }
 
 void loop() {
-    e->apply(r);
-    r->show();
+    effect->apply(output);
+    output->show();
     delay(FPS_60);
 }

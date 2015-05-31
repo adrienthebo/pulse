@@ -23,13 +23,13 @@ struct Whoa : Effect {
      */
     float lum_scale = 0.0101;
 
-    virtual void apply(Output *r) {
+    virtual void apply(Output *output) {
         Color c;
-        for(int i = 0; i < r->get_length(); i++) {
+        for(int i = 0; i < output->get_length(); i++) {
             hue = increment_hue(hue);
             lum = decrement_lum(lum);
             c.convert_hcl_to_rgb(hue, sat, lum);
-            r->set_pixel(i, c.red, c.green, c.blue);
+            output->set_pixel(i, c.red, c.green, c.blue);
         }
     }
 
